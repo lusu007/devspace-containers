@@ -12,7 +12,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_REPO: loft-sh/devspace-containers/javascript
+  IMAGE_REPO: lusu007/devspace-containers/javascript
 
 defaults:
   run:
