@@ -12,7 +12,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_REPO: lusu007/devpsace-containers/java-gradle
+  IMAGE_REPO: lusu007/devspace-containers/java-gradle
 
 defaults:
   run:
