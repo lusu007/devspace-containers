@@ -12,7 +12,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_REPO: loft-sh/devspace-containers/ruby
+  IMAGE_REPO: lusu007/devpsace-containers/ruby
 
 defaults:
   run:

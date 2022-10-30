@@ -12,7 +12,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_REPO: loft-sh/devspace-containers/python
+  IMAGE_REPO: lusu007/devpsace-containers/python
 
 defaults:
   run:
