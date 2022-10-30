@@ -22,14 +22,14 @@ chmod +x get_helm.sh
 ./get_helm.sh
 rm get_helm.sh
 
-curl -s -L "https://github.com/loft-sh/devspace/releases/$DEVSPACE_VERSION" | sed -nE 's!.*"([^"]*devspace-linux-'$ARCH_SHORT')".*!https://github.com\1!p' | xargs -n 1 curl -L -o devspace
+curl -s "https://api.github.com/repos/loft-sh/devspace/releases/$DEVSPACE_VERSION" | grep -P 'browser_download_url.*devspace-linux-'$ARCH_SHORT'(?![.])' | cut -d : -f 2,3 | tr -d \" | wget -qi -O devspace -
 chmod +x devspace
 install -p devspace /usr/local/bin;
 rm devspace
 
 devspace add plugin https://github.com/loft-sh/loft-devspace-plugin
 
-curl -s -L "https://github.com/loft-sh/loft/releases/latest" | sed -nE 's!.*"([^"]*loft-linux-'$ARCH_SHORT')".*!https://github.com\1!p' | xargs -n 1 curl -L -o loft
+curl -s "https://api.github.com/repos/loft-sh/loft/releases/latest" | grep -P 'browser_download_url.*loft-linux-'$ARCH_SHORT'(?![.])' | cut -d : -f 2,3 | tr -d \" | wget -qi -O loft -
 chmod +x loft
 install -p loft /usr/local/bin;
 rm loft
